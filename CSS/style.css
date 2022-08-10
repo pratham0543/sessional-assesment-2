@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 :root{
     --tcolor:#091540;
+    --logo-font:'Cinzel', serif;
+    --text-font:'Lato',sans-serif;
 }
 
 body{
@@ -14,7 +18,7 @@ nav{
   
 }
 nav a{
-    color:#F8F7F9 !important;
+    color:white !important;
 }
 .navbar-toggler{
     background-color:#F8F7F9;
@@ -24,10 +28,16 @@ nav a{
     color:black !important;
 }
 .container-fluid span{
-    color: #F8F7F9 !important;
+    color: white !important;
+    font-family: var(--logo-font);
+    /* font-size:2em; */
 }
 
+.navbar-collapse li a{
+    font-family: var(--text-font);
+    font-size:1.1em;
+}
 
 .logo{
-   width:50%;
+   width:4em;
 }
