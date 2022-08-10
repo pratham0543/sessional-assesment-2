@@ -1,0 +1,33 @@
+:root{
+    --tcolor:#091540;
+}
+
+body{
+    background-color: #F8F7F9;
+
+}
+
+
+/* navbar CSS */
+nav{
+    background-color: var(--tcolor);
+  
+}
+nav a{
+    color:#F8F7F9 !important;
+}
+.navbar-toggler{
+    background-color:#F8F7F9;
+    color:white;
+}
+.dropdown-item{
+    color:black !important;
+}
+.container-fluid span{
+    color: #F8F7F9 !important;
+}
+
+
+.logo{
+   width:50%;
+}
