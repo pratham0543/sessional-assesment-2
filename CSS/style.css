@@ -161,3 +161,87 @@ position: relative;
     
 }
 
+
+/* About section */
+
+#about{
+    background-color: var(--tcolor);
+    color:white;
+
+}
+#about h3{
+    display: inline-block;
+    border-bottom: 2px solid white;
+    position: relative;
+    top:50px;
+}
+#about-text{
+    display: flex;
+    align-items: center;
+}
+#about-text > p{
+    align-self: flex-start;
+}
+#about-content{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 16px;
+
+}
+.about-elements{
+    width:40%;
+    padding:5px;
+}
+
+
+#follow-links{
+    font-size:1.1em;
+}
+#follow-links a{
+    color:white;
+    
+}
+#follow-links div{
+    display: inline-block;
+    margin-right: 1.2em;
+    position:relative;
+    left:0.5em;
+    transition:transform 0.25s ;
+}
+#follow-links div:hover{
+    transform: translateY(-7px) ;
+}
+
+
+#create-blog{
+    align-self: center;
+}
+#create-blog p{
+    width:55%;
+    text-align: center;
+    font-size:18px;
+}
+#create-blog input{
+    width:55%;
+    
+}
+#create-blog input:focus, textarea:focus{
+    border:0 !important;
+    box-shadow: none !important;
+}
+textarea{
+    width: 55% !important;;
+    
+}
+
+
+
+
+
+
+
+
+#footer-para{
+    margin:0;
+}
