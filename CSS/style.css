@@ -139,3 +139,25 @@ position: relative;
 .reveal{
     display: block;
 }
+
+/* blogs container */
+.blogs-container{
+    width:88%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.card{
+    width:49%;
+}
+.card img{
+    width: 100%;
+    height:15rem ;
+    object-fit: cover;
+    
+}
+

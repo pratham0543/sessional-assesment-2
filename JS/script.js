@@ -4,6 +4,7 @@
 
 
 // Fetching api 
+const albums=["technology",'software engineering','music','sports','science','hills','gardens','furniture','timeless classics','cosmetics'];
 const xhr=new XMLHttpRequest();
 const url=`https://jsonplaceholder.typicode.com/photos?utm_source=Mailerlite&utm_medium=E-mail&utm_campaign=Test%20Series&utm_term=2022-08-09`;
 
@@ -39,7 +40,6 @@ const loadButton=(id)=>{
 }
 
 
-
 //Function for displaying content;
 const selectOutputDiv=(id,output)=>{
     const className=`.alb-${id}`
@@ -61,6 +61,18 @@ const createPictures=(url,title,id)=>{
     `;
    selectOutputDiv(id,output);
 }
+
+// function to setBlogCategory
+const setBlogCategories=()=>{
+    const categories=document.querySelectorAll('.blog-categories');
+    for(let i=0;i<6;i++){
+        const blogId=Math.floor(Math.random()*albums.length);
+        categories[i].innerHTML=albums[blogId].charAt(0).toUpperCase() + albums[blogId].slice(1);
+    }
+}
+
+
+
 
 
 // continuing ajax
@@ -145,6 +157,50 @@ const createPictures=(url,title,id)=>{
          createPictures(response[i].url,response[i].title,10);
      }
      loadButton(10);
+
+
+
+
+
+
+    // addings blogs to webpage
+
+    var blog=``;
+
+            for(let i=0;i<6;i++)
+            {
+                blog+=`
+                <div class="card mb-3">
+                <img src=${response[i].thumbnailUrl} class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title fw-bold text-uppercase">${response[i].title}</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia sed ex similique neque cumque reprehenderit eum ipsa nihil
+                   quos quae modi unde blanditiis voluptates, consequatur explicabo quas a temporibus.</p>
+                  <p class="card-text"><small class="text-muted">Author:John Doe | Category:<span class='blog-categories'>Technologies</span> </small></p>
+                </div>
+              </div>
+
+                
+                
+                `;
+            }
+
+            document.querySelector('.blogs-container').innerHTML=blog;
+           setBlogCategories();
+           
+             
+
+
+
+
+
+
+
+
+
+
+
+
         
         }
         //End of ajax code
@@ -156,9 +212,10 @@ xhr.send();
 
 
 // Array of albums
-const albums=["technology",'software engineering','music','sports','science','hills','gardens','furniture','timeless classics','cosmetics'];
 
+var categories;
 
+// navigate to particular album on search
 document.querySelector('#search-btn').addEventListener('click',(e)=>{
     e.preventDefault();
     const searchValue=document.querySelector(".search-val").value;
@@ -168,3 +225,33 @@ document.querySelector('#search-btn').addEventListener('click',(e)=>{
     window.location.href=new_loc;
     
 })
+
+// setting blogs categories
+
+
+
+var stringToHTML = function (str) {
+	var dom = document.createElement('div');
+    dom.setAttribute("class","card mb-3");
+    // dom.setAttribute("class","mb-3")
+	dom.innerHTML = str;
+	return dom;
+};
+ 
+//  const blog=`
+// <img src="https://via.placeholder.com/150/771796" class="card-img-top" alt="...">
+// <div class="card-body">
+//   <h5 class="card-title">Card title</h5>
+//   <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia sed ex similique neque cumque reprehenderit eum ipsa nihil
+//   quos quae modi unde blanditiis voluptates, consequatur explicabo quas a temporibus.</p>
+//   <p class="card-text"><small class="text-muted">Author:John Doe | Category:<span class='blog-categories'>Technologies</span></small></p>
+// </div>
+// `;
+
+// const blogId=stringToHTML(blog);
+// // blogId.setAttribute("class","card");
+// // blogId.setAttribute("class","mb-3");
+// console.log(blogId);
+
+// //const blogItem=document.createElement(blog);
+// setTimeout(()=>document.querySelector('.blogs-container').appendChild(blogId),2000);
