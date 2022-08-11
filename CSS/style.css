@@ -147,12 +147,12 @@ position: relative;
     margin-right: auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 
 .card{
-    width:49%;
+    width:40%;
 }
 .card img{
     width: 100%;

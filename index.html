@@ -33,7 +33,7 @@
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="#about">About</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -198,10 +198,11 @@
   <div id="about-content" >
     <div id="about-text" class="about-elements mt-1">
       <div>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos eum est cupiditate assumenda ut, 
-        iusto itaque quaerat quas quis id et explicabo, fugiat esse provident, mollitia ea. Soluta, facere sequi.
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor natus debitis dolorem. Voluptatum aliquam ipsam exercitationem 
-      fuga illum earum at sit quaerat harum! Sint eum quasi veniam sit, dolor quisquam!</p>
+      <p>This website has loads of high quality images
+        with different number of categories.You can either search the pre-defined categories from top and it will redirect to that particular category or explore them yourself.
+        This website also has a functionalty of live posting blogs.
+        Enter information on the right and just hit enter and see your blog being posted. 
+      </p>
         <div class="contact mt-4">
           <p class="alb-heading fw-bold" >Contact Us</p>
           <div id="follow-links">
@@ -217,8 +218,8 @@
       <p class="alb-heading fw-bold" >CREATE A BLOG</p>
       <form>
         <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Email address</label>
-          <input type="email" class="form-control form-control-sm" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <label for="title" class="form-label">Title</label>
+          <input type="text" class="form-control form-control-sm" id="title" aria-describedby="emailHelp">
         </div>
         <div class="mb-3">
           <label for="username" class="form-label">Username</label>
@@ -229,10 +230,10 @@
           <input type="text" class="form-control form-control-sm" id="category" aria-describedby="emailHelp">
         </div>
         <div class="mb-3">
-          <label for="exampleFormControlTextarea1" class="form-label">Comments</label>
-          <textarea class="form-control form-control-sm" id="exampleFormControlTextarea1" rows="2"></textarea>
+          <label for="text-content" class="form-label">Comments</label>
+          <textarea class="form-control form-control-sm" id="text-content" rows="2"></textarea>
         </div>
-        <button type="submit" class="btn btn-outline-light  d-block">Post It!</button>
+        <button id="post" type="submit" class="btn btn-outline-light  ">Post It!</button>
       </form>
       
     </div>

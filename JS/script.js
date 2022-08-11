@@ -9,7 +9,7 @@ const xhr=new XMLHttpRequest();
 const url=`https://jsonplaceholder.typicode.com/photos?utm_source=Mailerlite&utm_medium=E-mail&utm_campaign=Test%20Series&utm_term=2022-08-09`;
 
 xhr.open('GET',url);
-
+var response;
 
 
 xhr.onreadystatechange=()=>
@@ -78,7 +78,7 @@ const setBlogCategories=()=>{
 // continuing ajax
 
     if(xhr.readyState===4 && xhr.status===200){
-        const response=JSON.parse(xhr.responseText);
+         response=JSON.parse(xhr.responseText);
         //console.log(response);
         
 
@@ -233,25 +233,65 @@ document.querySelector('#search-btn').addEventListener('click',(e)=>{
 var stringToHTML = function (str) {
 	var dom = document.createElement('div');
     dom.setAttribute("class","card mb-3");
-    // dom.setAttribute("class","mb-3")
+    
 	dom.innerHTML = str;
 	return dom;
 };
  
-//  const blog=`
-// <img src="https://via.placeholder.com/150/771796" class="card-img-top" alt="...">
-// <div class="card-body">
-//   <h5 class="card-title">Card title</h5>
-//   <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia sed ex similique neque cumque reprehenderit eum ipsa nihil
-//   quos quae modi unde blanditiis voluptates, consequatur explicabo quas a temporibus.</p>
-//   <p class="card-text"><small class="text-muted">Author:John Doe | Category:<span class='blog-categories'>Technologies</span></small></p>
-// </div>
-// `;
+const createAddBlogCard=(cardTitle,authorName,category,content)=>{
+
+    const id=Math.floor(Math.random()*500);
+    const blog=`
+<img src="${response[id].thumbnailUrl}" class="card-img-top" alt="...">
+<div class="card-body">
+  <h5 class="card-title">${cardTitle}</h5>
+  <p class="card-text">${content}</p>
+  <p class="card-text"><small class="text-muted">Author:${authorName} | Category:<span class='blog-categories'>${category}</span></small></p>
+</div>
+`;
+const blogId=stringToHTML(blog);
+
+document.querySelector('.blogs-container').appendChild(blogId);
+
+}
+
+
+
+ 
 
 // const blogId=stringToHTML(blog);
-// // blogId.setAttribute("class","card");
-// // blogId.setAttribute("class","mb-3");
 // console.log(blogId);
 
-// //const blogItem=document.createElement(blog);
 // setTimeout(()=>document.querySelector('.blogs-container').appendChild(blogId),2000);
+
+
+
+// creating and adding blog to blogs section of webpage
+document.querySelector('#post').addEventListener('click',(e)=>{
+    e.preventDefault();
+    const name=document.querySelector('#username');
+    const user_category=document.querySelector('#category');
+    const text_value=document.querySelector('#text-content');
+    const title_value=document.querySelector('#title');
+    if(name.value.trim()!==""  && user_category.value.trim()!=="" && text_value.value.trim()!=="" && title_value.value.trim()!==""){
+        const userName=name.value;
+        const category=user_category.value;
+        const textVal=text_value.value;
+        const title=title_value.value;
+        createAddBlogCard(title,userName,category,textVal);
+
+
+
+
+    }
+    else{
+        alert("Please enter valid input");
+    }
+    name.value="";
+    user_category.value="";
+    text_value.value="";
+    title_value.value="";
+
+
+
+})
