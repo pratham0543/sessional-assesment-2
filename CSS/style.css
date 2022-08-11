@@ -8,9 +8,14 @@
 
 body{
     background-color: #F8F7F9;
+    font-family: var(--text-font);
 
 }
 
+.headings{
+   font-family: var(--logo-font);
+   
+}
 
 /* navbar CSS */
 nav{
@@ -40,4 +45,71 @@ nav a{
 
 .logo{
    width:4em;
+}
+
+/* Albums section */
+.albums{
+    width:85%;
+}
+.alb-heading{
+    letter-spacing: 0.2px;
+}
+.alb-heading + hr{
+    width:11%;
+}
+.img-container{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.full-img{
+position: relative;
+ width: 18%;
+ box-shadow: 0px 3px 11px 0px;
+ transition: 0.2s all ease;
+}
+
+.img-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position:absolute;
+  height: 100%;
+   width:100%;
+    text-align: center;
+   top:0;
+    color:white;
+    text-transform: capitalize;
+    font-size:1em;
+    font-weight: bold;
+    background: rgba(0,0,0,0.2);
+    opacity: 0;
+ transition: 0.2s all ease;
+
+  
+}  
+.img-content:hover{
+    opacity: 1;
+}
+.img-content p{
+    width:98%;
+    /* margin-bottom: 0; */
+}
+.img-content p:nth-child(2)
+{
+    margin-top:;
+}
+
+.full-img img{
+    position: relative;
+    width: 100%;
+}
+
+
+/* some transitions on full-img */
+.full-img:hover{
+    transform: scaleX(1.1) scaleY(1.1);
+    z-index: 10;
 }
