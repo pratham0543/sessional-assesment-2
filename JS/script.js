@@ -154,5 +154,6 @@ const createPictures=(url,title,id)=>{
 
 xhr.send();
 
-
-
+document.querySelector('#search-btn').addEventListener('click',()=>{
+    
+})
