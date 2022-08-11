@@ -1,0 +1,45 @@
+@media screen and (max-width:999px){
+
+    .img-content{
+        font-size: 13px;
+    }
+    .full-img{
+        width: 20%;
+    }
+    .alb-heading + hr{
+        width: 35%;
+    }
+}
+
+
+
+
+@media screen and (max-width:900px){
+
+   
+    .full-img{
+        width: 23%;
+    }
+}
+
+
+@media screen and (max-width:600px){
+    
+    .full-img{
+        width: 31%;
+    }
+    .alb-heading + hr{
+        width: 60%;
+    }
+}
+
+
+
+@media screen and (max-width:460px){
+    .img-container{
+        justify-content: space-around;
+    }
+    .full-img{
+        width: 40%;
+    }
+}

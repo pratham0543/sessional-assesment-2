@@ -58,6 +58,7 @@ nav a{
 }
 .alb-heading{
     letter-spacing: 0.2px;
+    text-transform: uppercase;
 }
 .alb-heading + hr{
     width:11%;
@@ -100,6 +101,7 @@ position: relative;
 }
 .img-content p{
     width:98%;
+    pointer-events: none;
     
 }
 
