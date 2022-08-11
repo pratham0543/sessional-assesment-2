@@ -154,6 +154,17 @@ const createPictures=(url,title,id)=>{
 
 xhr.send();
 
-document.querySelector('#search-btn').addEventListener('click',()=>{
+
+// Array of albums
+const albums=["technology",'software engineering','music','sports','science','hills','gardens','furniture','timeless classics','cosmetics'];
+
+
+document.querySelector('#search-btn').addEventListener('click',(e)=>{
+    e.preventDefault();
+    const searchValue=document.querySelector(".search-val").value;
+    const loc=window.location.origin;
+    const alb_id=albums.indexOf(searchValue.toLowerCase());
+    const new_loc=loc+`\#album${alb_id+1}`;
+    window.location.href=new_loc;
     
 })
