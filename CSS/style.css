@@ -51,6 +51,9 @@ nav a{
 .albums{
     width:85%;
 }
+.albums-section{
+    animation-delay: 1s;
+}
 .alb-heading{
     letter-spacing: 0.2px;
 }
@@ -95,12 +98,9 @@ position: relative;
 }
 .img-content p{
     width:98%;
-    /* margin-bottom: 0; */
+    
 }
-.img-content p:nth-child(2)
-{
-    margin-top:;
-}
+
 
 .full-img img{
     position: relative;
@@ -112,4 +112,26 @@ position: relative;
 .full-img:hover{
     transform: scaleX(1.1) scaleY(1.1);
     z-index: 10;
+}
+
+.load-more-btn{
+    background-color: var(--tcolor);
+    color:white;
+    box-shadow: none;
+
+}
+.load-more-btn:active{
+    background-color: var(--tcolor);
+}
+.load-more-btn:focus{
+    background-color: var(--tcolor);
+}
+
+
+/* load more btn functionality */
+.hide{
+    display: none;
+}
+.reveal{
+    display: block;
 }

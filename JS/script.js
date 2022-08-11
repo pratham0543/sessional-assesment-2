@@ -13,7 +13,7 @@ xhr.onreadystatechange=()=>
         //console.log(response);
         var output=``;
 
-        for(let i=0;i<5;i++){
+        for(let i=0;i<50;i++){
         output+=`
          <div class="full-img rounded mb-2">
          
@@ -26,8 +26,45 @@ xhr.onreadystatechange=()=>
         
         `;
         }
-        document.querySelector('.img-container').innerHTML=output;
-    }
+        const className=`.alb-${1}`
+        document.querySelector(className).innerHTML=output;
+        
+        
+        }
+        //End of ajax code
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         // This applies to all albums on images expect first 5;
+         for(let i=5;i<50;i++){
+            document.querySelectorAll("#album1 .full-img")[i].classList.add('hide');
+           }
+        document.querySelector('.load-more-btn').addEventListener('click',()=>{
+            for(let i=5;i<50;i++){
+                document.querySelectorAll("#album1 .full-img")[i].classList.toggle('reveal');
+               } 
+
+
+        })
+
 }
 
 xhr.send();
+
+
+// Scripting for load more
