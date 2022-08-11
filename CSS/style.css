@@ -53,6 +53,7 @@ nav a{
 }
 .albums-section{
     animation-delay: 1s;
+    margin-bottom:50px;
 }
 .alb-heading{
     letter-spacing: 0.2px;
