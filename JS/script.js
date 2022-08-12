@@ -221,7 +221,7 @@ document.querySelector('#search-btn').addEventListener('click',(e)=>{
     const searchValue=document.querySelector(".search-val").value;
     const loc=window.location.origin;
     const alb_id=albums.indexOf(searchValue.toLowerCase());
-    const new_loc=loc+`\#album${alb_id+1}`;
+    const new_loc=loc+`/sessional-assesment-2/#album${alb_id+1}`;
     window.location.href=new_loc;
     
 })
